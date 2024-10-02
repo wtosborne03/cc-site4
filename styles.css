@@ -1,0 +1,97 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background-color: #6B4226;
+    /* Brown */
+    color: #FFFFFF;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.container {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.logo {
+    max-width: 300px;
+    aspect-ratio: 1/1;
+}
+
+.description {
+    margin-top: 20px;
+    font-size: 1.2rem;
+    color: white;
+    /* Yellow */
+}
+
+.play-now {
+    width: 100%;
+    display: inline-block;
+    margin-top: 15px;
+    padding: 10px 20px;
+    font-size: 1.5rem;
+    color: #FFFFFF;
+    background-color: rgb(255, 0, 68);
+    /* Red */
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3)
+}
+
+.play-now:hover {
+    background-color: #FF6347;
+    /* Lighter Red */
+}
+
+.buy-now {
+    width: 100%;
+    display: inline-block;
+    margin-top: 15px;
+    padding: 10px 20px;
+    font-size: 1.5rem;
+    color: #FFFFFF;
+    background-color: rgb(111, 117, 128);
+    /* Red */
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3)
+}
+
+.buy-now:hover {
+    background-color: #FF6347;
+    /* Lighter Red */
+}
+
+.gradient-background {
+    background: linear-gradient(300deg, rgb(223, 157, 110), #ff6a6a, #d7cd94);
+    background-size: 180% 180%;
+
+    animation: gradient-animation 18s ease infinite;
+}
+
+@keyframes gradient-animation {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
+}
