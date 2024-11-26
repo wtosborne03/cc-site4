@@ -256,7 +256,7 @@ html:before {
 footer {
     padding: 20px 0;
     background: rgba(0, 0, 0, 0.7);
-    height: 100px;
+    height: 130px;
 }
 
 .f-cont {
@@ -281,7 +281,7 @@ footer {
 .footer-links a {
     color: #fff;
     text-decoration: none;
-    margin: 0 10px;
+    margin: 10px 10px;
     font-size: 1rem;
 }
 
@@ -289,7 +289,7 @@ footer {
     font-size: 2rem;
     width: 32px;
     height: 32px;
-    margin: 0 5px;
+    margin: 5px 5px;
 }
 
 .social-media a {
