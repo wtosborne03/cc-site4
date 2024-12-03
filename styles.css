@@ -55,8 +55,7 @@ body {
 }
 
 .play-now {
-    width: 100%;
-    max-width: 300px;
+    width: 646px;
     display: inline-block;
     margin-top: 15px;
     padding: 15px 30px;
