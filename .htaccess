@@ -1,2 +1,20 @@
+<IfModule mod_headers.c>
+    # Ensure Apache handles the Range header
+    Header set Accept-Ranges bytes
+    # Add headers to support chunked playback
+    <FilesMatch "\.(mp4)$">
+        Header set Content-Type "video/mp4"
+        Header set Cache-Control "no-store, no-cache, must-revalidate, max-age=0"
+        Header set Pragma "no-cache"
+    </FilesMatch>
+</IfModule>
+
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+    # Enable serving partial content
+    RewriteCond %{HTTP:Range} !^$
+    RewriteRule .* - [E=HTTP_RANGE:%{HTTP:Range}]
+</IfModule>
+
 SetOutputFilter DEFLATE
-SetEnvIfNoCase Request_URI \.(mp4|ogv|webm)$ no-gzip dont-vary
+SetEnvIfNoCase Request_URI .(mp4|ogv|webm)$ no-gzip dont-vary
