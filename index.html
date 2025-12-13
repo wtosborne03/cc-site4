@@ -1,10 +1,10 @@
 <!DOCTYPE html>
-<html lang="en" class="gradient-background">
+<html lang="en">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-    <title>Couch Cup | Endless Amusement, No Controller Necessary </title>
+    <title>Couch Cup | Endless Amusement, No Controller Necessary</title>
 
     <!-- Favicon -->
     <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
@@ -14,8 +14,14 @@
     <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
     <meta name="msapplication-TileColor" content="#da532c">
 
-    <script src="https://kit.fontawesome.com/94fbbf70a6.js" crossorigin="anonymous"></script>
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;600;700&family=Inter:wght@400;600&display=swap"
+        rel="stylesheet">
 
+    <script src="https://kit.fontawesome.com/94fbbf70a6.js" crossorigin="anonymous"></script>
 
     <!-- Meta Tags for SEO -->
     <meta name="description"
@@ -39,63 +45,206 @@
 </head>
 
 <body>
-    <div
-        style="position: absolute; z-index: -10; top: 0px; object-fit: cover; filter: blur(10px) brightness(0.4); width: 100%; height: 50rem;">
-        <video webkit-playsinline playsinline preload="metadata" style="width: 100%; height: 100%; object-fit: cover;"
-            autoplay muted loop>
+    <!-- Background Video -->
+    <div class="video-background">
+        <video playsinline preload="metadata" autoplay muted loop poster="logo.webp">
             <source src="./gameplay.webm" type="video/webm" />
-            <source src="./gameplay-ios.mp4" type="video/mp4" />
             <source src="./gameplay.mp4" type="video/mp4" />
         </video>
+        <div class="overlay"></div>
     </div>
-    <div class=" container">
-        <div>
-            <img class="logo" src="logo.webp" alt="Couch Cup Logo - The Ultimate Trivia Game">
+
+    <!-- Hero Section -->
+    <header class="hero">
+        <div class="hero-content">
+            <img class="logo animate-pop" src="logo.webp" alt="Couch Cup Logo">
+            <h1 class="tagline animate-slide-up">Endless Amusement,<br>No Controller Necessary</h1>
+            <div class="cta-group animate-slide-up delay-1">
+                <a href="https://play.couchcup.tv/" class="btn btn-primary" title="Join a Couch Cup Game Now">
+                    <i class="fas fa-gamepad"></i> Join a Game
+                </a>
+                <a href="https://store.steampowered.com/app/3359160" class="btn btn-steam"
+                    title="Purchase Couch Cup on Steam">
+                    <i class="fab fa-steam"></i> Buy on Steam
+                </a>
+            </div>
         </div>
-        <h1 class="description">Endless Amusement, No Controller Necessary</h1>
-        <a href="https://play.couchcup.tv/" class="play-now" title="Join a Couch Cup Game Now">Join a Game 🕹️</a>
-        <a href="https://store.steampowered.com/app/3359160" class="buy-now" title="Purchase Couch Cup"> Buy Now <i
-                class="fab fa-steam"></i></a>
-    </div>
-    <div class="details" style="margin-top: 5rem;">
+        <div class="scroll-indicator animate-bounce">
+            <i class="fas fa-chevron-down"></i>
+        </div>
+    </header>
+
+    <!-- Features Section -->
+    <main>
         <section class="features">
-            <div class="feature-grid">
-                <div class="feature-item">
-                    <i class="fas fa-users fa-fw" style="font-size:2rem; padding: 0.5rem;"></i>
-                    <h3>Multiplayer Fun</h3>
-                    <p>Play with friends and family, no matter where they are.</p>
-                </div>
-                <div class="feature-item">
-                    <i class="fas fa-gamepad fa-fw" style="font-size:2rem; padding: 0.5rem;"></i>
-                    <h3>Endless Minigames</h3>
-                    <p>Hundreds of trivia questions, debates, and team tournaments to keep you entertained.</p>
-                </div>
-                <div class="feature-item">
-                    <i class="fas fa-palette fa-fw" style="font-size:2rem; padding: 0.5rem;"></i>
-                    <h3>No Controller Necessary</h3>
-                    <p>Grab a TV and some friends, up to 12 players can join using their phones.</p>
+            <div class="container">
+                <h2 class="section-title">Why Play Couch Cup?</h2>
+                <div class="feature-grid">
+                    <div class="feature-card">
+                        <div class="icon-wrapper">
+                            <i class="fas fa-users"></i>
+                        </div>
+                        <h3>Multiplayer Madness</h3>
+                        <p>Gather 3-12 friends for chaotic fun. Perfect for parties, family nights, or hanging out
+                            online.</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="icon-wrapper">
+                            <i class="fas fa-mobile-alt"></i>
+                        </div>
+                        <h3>Phones as Controllers</h3>
+                        <p>No extra gear needed! Everyone plays using their own smartphone. Just scan and play.</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="icon-wrapper">
+                            <i class="fas fa-dice"></i>
+                        </div>
+                        <h3>Endless Minigames</h3>
+                        <p>From trivia and drawing to debates and strategy. 12+ unique minigames keep it fresh.</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="icon-wrapper">
+                            <i class="fas fa-robot"></i>
+                        </div>
+                        <h3>AI Host</h3>
+                        <p>Meet your witty AI host who reacts to your gameplay and keeps the party moving.</p>
+                    </div>
                 </div>
             </div>
         </section>
 
-    </div>
+        <!-- How It Works / CTA Strip -->
+        <section class="how-it-works">
+            <div class="container">
+                <div class="steps">
+                    <div class="step">
+                        <span class="step-number">1</span>
+                        <p>Launch Game on TV/PC</p>
+                    </div>
+                    <div class="step-divider"></div>
+                    <div class="step">
+                        <span class="step-number">2</span>
+                        <p>Players Join via Phone</p>
+                    </div>
+                    <div class="step-divider"></div>
+                    <div class="step">
+                        <span class="step-number">3</span>
+                        <p>Chaos Ensues!</p>
+                    </div>
+                </div>
+            </div>
+        </section>
 
-    <div class="f-cont">
-        <footer>
+        <!-- Minigames Showcase -->
+        <section class="minigames">
+            <div class="container">
+                <h2 class="section-title">What's in the Cup?</h2>
+                <p class="section-subtitle">Over a dozen unique minigames to ruin friendships and build memories.</p>
+                <div class="games-grid">
+                    <div class="game-card">
+                        <div class="game-icon"><i class="fas fa-brain"></i></div>
+                        <h4>Trivia</h4>
+                        <p>Test your knowledge with thousands of questions across weird and wonderful categories.</p>
+                    </div>
+                    <div class="game-card">
+                        <div class="game-icon"><i class="fas fa-pencil-alt"></i></div>
+                        <h4>Write to Survive</h4>
+                        <p>One player comes up with a scenario, each player writes their way out of it.</p>
+                    </div>
+                    <div class="game-card">
+                        <div class="game-icon"><i class="fas fa-gavel"></i></div>
+                        <h4>Debate it</h4>
+                        <p>Argue for ridiculous topics and let the room vote on who won.</p>
+                    </div>
+                    <div class="game-card">
+                        <div class="game-icon"><i class="fas fa-chess"></i></div>
+                        <h4>Monkey's Dilemma</h4>
+                        <p>Outwit your opponents in banana-stealing showdowns and tactical challenges.</p>
+                    </div>
+                    <div class="game-card">
+                        <div class="game-icon"><i class="fas fa-person-falling-burst"></i></div>
+                        <h4>Don't Fall Off</h4>
+                        <p>Bump your opponents off the stage to claim victory in this chaotic free-for-all.</p>
+                    </div>
+                    <div class="game-card">
+                        <div class="game-icon"><i class="fas fa-paint-brush"></i></div>
+                        <h4>Swipe Sketch</h4>
+                        <p>Unleash your inner artist and create a dating profile that other players can swipe through.
+                        </p>
+                    </div>
+                    <div class="game-card">
+                        <div class="game-icon"><i class="fa-solid fa-kiwi-bird"></i></div>
+                        <h4>Duck Shake</h4>
+                        <p>Shake your device to get your duck closer to victory.</p>
+                    </div>
+                    <div class="game-card">
+                        <div class="game-icon"><i class="fa-solid fa-gamepad"></i></div>
+                        <h4>And Many More...</h4>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- FAQ Section -->
+        <section class="faq">
+            <div class="container">
+                <h2 class="section-title">Frequently Asked Questions</h2>
+                <div class="faq-grid">
+                    <div class="faq-item">
+                        <h4><i class="fas fa-question-circle"></i> Do I need controllers?</h4>
+                        <p>Nope! Just one copy of the game on a PC or TV, and everyone joins using their own smartphone.
+                        </p>
+                    </div>
+                    <div class="faq-item">
+                        <h4><i class="fas fa-users"></i> How many players?</h4>
+                        <p>Couch Cup supports 3 to 12 players locally or online. The more the merrier!</p>
+                    </div>
+                    <div class="faq-item">
+                        <h4><i class="fas fa-globe"></i> Is it online?</h4>
+                        <p>Yes! You can play with friends in the same room or stream it over Discord/Zoom for remote
+                            play.</p>
+                    </div>
+                    <div class="faq-item">
+                        <h4><i class="fas fa-beer"></i> Is there a drinking mode?</h4>
+                        <p>You bet. Toggle it on for spicy prompts and challenges designed for adult audiences.</p>
+                    </div>
+                    <div class="faq-item">
+                        <h4><i class="fas fa-user-astronaut"></i> Can I customize my avatar?</h4>
+                        <p>Each player can personalize their avatar for any game using our completely optional account
+                            system.</p>
+                    </div>
+                    <div class="faq-item">
+                        <h4><i class="fa-solid fa-dollar-sign"></i> Can I have the game for free?</h4>
+                        <p>Its five dollars.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
             <div class="footer-content">
+                <div class="footer-brand">
+                    <h3>Couch Cup</h3>
+                    <p>&copy; 2025 Couch Cup. All rights reserved.</p>
+                </div>
                 <div class="footer-links">
                     <a href="/privacy.html">Privacy Policy</a>
                     <a href="/termsofservice.html">Terms of Service</a>
-                    <a href="mailto:support@couchcup.tv">support@couchcup.tv</a>
+                    <a href="mailto:support@couchcup.tv">Contact Support</a>
                 </div>
                 <div class="social-media">
-                    <a href="https://bsky.app/profile/couchcup.tv"><i class="fab fa-bluesky"></i></a>
-                    <a href="https://www.youtube.com/@CouchCup"><i class="fab fa-youtube"></i></a>
+                    <a href="https://bsky.app/profile/couchcup.tv" aria-label="Bluesky"><i
+                            class="fab fa-bluesky"></i></a>
+                    <a href="https://www.youtube.com/@CouchCup" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                    <a href="https://store.steampowered.com/app/3359160" aria-label="Steam"><i
+                            class="fab fa-steam"></i></a>
                 </div>
             </div>
-            <p>&copy; 2024 Couch Cup. All rights reserved.</p>
-        </footer>
-    </div>
+        </div>
+    </footer>
 </body>
 
 </html>
