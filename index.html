@@ -45,15 +45,8 @@
 </head>
 
 <body>
-    <!-- Background Video -->
-    <div class="video-background">
-        <video playsinline preload="metadata" autoplay muted loop poster="logo.webp">
-            <source src="./gameplay.webm" type="video/webm" />
-            <source src="./gameplay-ios.mp4" type="video/mp4" />
-            <source src="./gameplay.mp4" type="video/mp4" />
-        </video>
-        <div class="overlay"></div>
-    </div>
+    <!-- Animated Background Mesh -->
+    <div class="bg-mesh"></div>
 
     <!-- Hero Section -->
     <header class="hero">
@@ -69,118 +62,248 @@
                     <i class="fab fa-steam"></i> Buy on Steam
                 </a>
             </div>
-        </div>
-        <div class="scroll-indicator animate-bounce">
-            <i class="fas fa-chevron-down"></i>
+
+            <!-- Gameplay Trailer Video -->
+            <div class="hero-video-wrapper animate-slide-up delay-2">
+                <iframe src="https://www.youtube.com/embed/WEiNLIirdCE?modestbranding=1&rel=0&iv_load_policy=3"
+                    title="Couch Cup Gameplay Trailer"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    allowfullscreen>
+                </iframe>
+            </div>
         </div>
     </header>
 
     <!-- Features Section -->
     <main>
-        <section class="features">
-            <div class="container">
-                <h2 class="section-title">Why Play Couch Cup?</h2>
-                <div class="feature-grid">
-                    <div class="feature-card">
-                        <div class="icon-wrapper">
-                            <i class="fas fa-users"></i>
-                        </div>
-                        <h3>Multiplayer Madness</h3>
-                        <p>Gather 3-12 friends for chaotic fun. Perfect for parties, family nights, or hanging out
-                            online.</p>
-                    </div>
-                    <div class="feature-card">
-                        <div class="icon-wrapper">
-                            <i class="fas fa-mobile-alt"></i>
-                        </div>
-                        <h3>Phones as Controllers</h3>
-                        <p>No extra gear needed! Everyone plays using their own smartphone. Just scan and play.</p>
-                    </div>
-                    <div class="feature-card">
-                        <div class="icon-wrapper">
-                            <i class="fas fa-dice"></i>
-                        </div>
-                        <h3>Endless Minigames</h3>
-                        <p>From trivia and drawing to debates and strategy. 12+ unique minigames keep it fresh.</p>
-                    </div>
-                    <div class="feature-card">
-                        <div class="icon-wrapper">
-                            <i class="fas fa-robot"></i>
-                        </div>
-                        <h3>AI Host</h3>
-                        <p>Meet your witty AI host who reacts to your gameplay and keeps the party moving.</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- How It Works / CTA Strip -->
-        <section class="how-it-works">
-            <div class="container">
-                <div class="steps">
-                    <div class="step">
-                        <span class="step-number">1</span>
-                        <p>Launch Game on TV/PC</p>
-                    </div>
-                    <div class="step-divider"></div>
-                    <div class="step">
-                        <span class="step-number">2</span>
-                        <p>Players Join via Phone</p>
-                    </div>
-                    <div class="step-divider"></div>
-                    <div class="step">
-                        <span class="step-number">3</span>
-                        <p>Chaos Ensues!</p>
-                    </div>
-                </div>
-            </div>
-        </section>
 
         <!-- Minigames Showcase -->
         <section class="minigames">
             <div class="container">
                 <h2 class="section-title">What's in the Cup?</h2>
-                <p class="section-subtitle">Over a dozen unique minigames to ruin friendships and build memories.</p>
-                <div class="games-grid">
-                    <div class="game-card">
-                        <div class="game-icon"><i class="fas fa-brain"></i></div>
-                        <h4>Trivia</h4>
-                        <p>Test your knowledge with thousands of questions across weird and wonderful categories.</p>
+                <p class="section-subtitle">25 unique party minigames to test your wits, ruin friendships, and spark
+                    laughter.</p>
+
+                <div class="carousel-container">
+                    <button class="carousel-nav-btn prev" aria-label="Previous slide" id="prev-btn">
+                        <i class="fas fa-chevron-left"></i>
+                    </button>
+                    <button class="carousel-nav-btn next" aria-label="Next slide" id="next-btn">
+                        <i class="fas fa-chevron-right"></i>
+                    </button>
+
+                    <div class="carousel-scroller" id="carousel-scroller">
+                        <!-- Card 1 -->
+                        <div class="carousel-item">
+                            <img class="carousel-image" src="boxArt/trivia.webp" alt="Trivia Box Art" loading="lazy">
+                            <div class="carousel-info">
+                                <h3>Trivia</h3>
+                                <p>Answer trivia questions</p>
+                            </div>
+                        </div>
+                        <!-- Card 2 -->
+                        <div class="carousel-item">
+                            <img class="carousel-image" src="boxArt/survive.webp" alt="Survive Box Art" loading="lazy">
+                            <div class="carousel-info">
+                                <h3>Survive</h3>
+                                <p>Write to survive</p>
+                            </div>
+                        </div>
+                        <!-- Card 3 -->
+                        <div class="carousel-item">
+                            <img class="carousel-image" src="boxArt/debate.webp" alt="Debate Box Art" loading="lazy">
+                            <div class="carousel-info">
+                                <h3>Debate</h3>
+                                <p>Debate with the other players</p>
+                            </div>
+                        </div>
+                        <!-- Card 4 -->
+                        <div class="carousel-item">
+                            <img class="carousel-image" src="boxArt/dilemma.webp" alt="Dilemma Box Art" loading="lazy">
+                            <div class="carousel-info">
+                                <h3>Dilemma</h3>
+                                <p>Age old monkey question.</p>
+                            </div>
+                        </div>
+                        <!-- Card 5 -->
+                        <div class="carousel-item">
+                            <img class="carousel-image" src="boxArt/fall.webp" alt="Fall Box Art" loading="lazy">
+                            <div class="carousel-info">
+                                <h3>Fall</h3>
+                                <p>Don't fall off the platform</p>
+                            </div>
+                        </div>
+                        <!-- Card 6 -->
+                        <div class="carousel-item">
+                            <img class="carousel-image" src="boxArt/sketch.webp" alt="Sketch Match Box Art"
+                                loading="lazy">
+                            <div class="carousel-info">
+                                <h3>Sketch Match</h3>
+                                <p>Create and swipe some dating profiles!</p>
+                            </div>
+                        </div>
+                        <!-- Card 7 -->
+                        <div class="carousel-item">
+                            <img class="carousel-image" src="boxArt/shake.webp" alt="Shake Box Art" loading="lazy">
+                            <div class="carousel-info">
+                                <h3>Shake</h3>
+                                <p>Shake your duck to win!</p>
+                            </div>
+                        </div>
+                        <!-- Card 8 -->
+                        <div class="carousel-item">
+                            <img class="carousel-image" src="boxArt/act.webp" alt="Charades Box Art" loading="lazy">
+                            <div class="carousel-info">
+                                <h3>Charades</h3>
+                                <p>Hope you can act like a pro!</p>
+                            </div>
+                        </div>
+                        <!-- Card 9 -->
+                        <div class="carousel-item">
+                            <img class="carousel-image" src="boxArt/ball.webp" alt="Soccer Box Art" loading="lazy">
+                            <div class="carousel-info">
+                                <h3>Soccer</h3>
+                                <p>Ball your way to victory!</p>
+                            </div>
+                        </div>
+                        <!-- Card 10 -->
+                        <div class="carousel-item">
+                            <img class="carousel-image" src="boxArt/blanks.webp" alt="Blanks Box Art" loading="lazy">
+                            <div class="carousel-info">
+                                <h3>Blanks</h3>
+                                <p>Fill in the blanks</p>
+                            </div>
+                        </div>
+                        <!-- Card 11 -->
+                        <div class="carousel-item">
+                            <img class="carousel-image" src="boxArt/bomb.webp" alt="Bomb Box Art" loading="lazy">
+                            <div class="carousel-info">
+                                <h3>Bomb</h3>
+                                <p>Avoid the bombs</p>
+                            </div>
+                        </div>
+                        <!-- Card 12 -->
+                        <div class="carousel-item">
+                            <img class="carousel-image" src="boxArt/bus.webp" alt="Bus Ride Box Art" loading="lazy">
+                            <div class="carousel-info">
+                                <h3>Bus Ride</h3>
+                                <p>Avoid the bombs</p>
+                            </div>
+                        </div>
+                        <!-- Card 13 -->
+                        <div class="carousel-item">
+                            <img class="carousel-image" src="boxArt/fakts.webp" alt="Topic Box Art" loading="lazy">
+                            <div class="carousel-info">
+                                <h3>Topic</h3>
+                                <p>Guess which facts are true and which are false</p>
+                            </div>
+                        </div>
+                        <!-- Card 14 -->
+                        <div class="carousel-item">
+                            <img class="carousel-image" src="boxArt/know.webp" alt="Know 'Em Box Art" loading="lazy">
+                            <div class="carousel-info">
+                                <h3>Know 'Em</h3>
+                                <p>Answer questions about your friends</p>
+                            </div>
+                        </div>
+                        <!-- Card 15 -->
+                        <div class="carousel-item">
+                            <img class="carousel-image" src="boxArt/nuke.webp" alt="Map Box Art" loading="lazy">
+                            <div class="carousel-info">
+                                <h3>Map</h3>
+                                <p>One player nukes a location, others hide. Don't get blown up!</p>
+                            </div>
+                        </div>
+                        <!-- Card 16 -->
+                        <div class="carousel-item">
+                            <img class="carousel-image" src="boxArt/odds.webp" alt="Kalshi Box Art" loading="lazy">
+                            <div class="carousel-info">
+                                <h3>Kalshi</h3>
+                                <p>Guess the current public odds of Kalshi prediction markets</p>
+                            </div>
+                        </div>
+                        <!-- Card 17 -->
+                        <div class="carousel-item">
+                            <img class="carousel-image" src="boxArt/pc.webp" alt="Prompt & Circumstance Box Art"
+                                loading="lazy">
+                            <div class="carousel-info">
+                                <h3>Prompt & Circumstance</h3>
+                                <p>Write prompts to generate AI images, caption them, and vote!</p>
+                            </div>
+                        </div>
+                        <!-- Card 18 -->
+                        <div class="carousel-item">
+                            <img class="carousel-image" src="boxArt/picture_person.webp" alt="Picture Me Box Art"
+                                loading="lazy">
+                            <div class="carousel-info">
+                                <h3>Picture Me</h3>
+                                <p>Find a player's true representation 🖼️</p>
+                            </div>
+                        </div>
+                        <!-- Card 19 -->
+                        <div class="carousel-item">
+                            <img class="carousel-image" src="boxArt/picture_prompt.webp" alt="Picture Prompt Box Art"
+                                loading="lazy">
+                            <div class="carousel-info">
+                                <h3>Picture Prompt</h3>
+                                <p>Guess the picture</p>
+                            </div>
+                        </div>
+                        <!-- Card 20 -->
+                        <div class="carousel-item">
+                            <img class="carousel-image" src="boxArt/rather.webp" alt="Would You Rather Box Art"
+                                loading="lazy">
+                            <div class="carousel-info">
+                                <h3>Would You Rather</h3>
+                                <p>Write two divisive options and try to split the room 50/50!</p>
+                            </div>
+                        </div>
+                        <!-- Card 21 -->
+                        <div class="carousel-item">
+                            <img class="carousel-image" src="boxArt/recipe.webp" alt="Recipe Remix Box Art"
+                                loading="lazy">
+                            <div class="carousel-info">
+                                <h3>Recipe Remix</h3>
+                                <p>Work together to cook a delicious meal! Follow the recipe steps in order.</p>
+                            </div>
+                        </div>
+                        <!-- Card 22 -->
+                        <div class="carousel-item">
+                            <img class="carousel-image" src="boxArt/remix.webp" alt="Pic Remix Box Art" loading="lazy">
+                            <div class="carousel-info">
+                                <h3>Pic Remix</h3>
+                                <p>Remix a player's selfie with AI prompts and vote on the best edit!</p>
+                            </div>
+                        </div>
+                        <!-- Card 23 -->
+                        <div class="carousel-item">
+                            <img class="carousel-image" src="boxArt/roulette.webp" alt="Roulette Box Art"
+                                loading="lazy">
+                            <div class="carousel-info">
+                                <h3>Roulette</h3>
+                                <p>Spin the wheel to win!</p>
+                            </div>
+                        </div>
+                        <!-- Card 24 -->
+                        <div class="carousel-item">
+                            <img class="carousel-image" src="boxArt/spy.webp" alt="Spy Box Art" loading="lazy">
+                            <div class="carousel-info">
+                                <h3>Spy</h3>
+                                <p>Whos the real spy?</p>
+                            </div>
+                        </div>
+                        <!-- Card 25 -->
+                        <div class="carousel-item">
+                            <img class="carousel-image" src="boxArt/trump.webp" alt="Trump Box Art" loading="lazy">
+                            <div class="carousel-info">
+                                <h3>Trump</h3>
+                                <p>Formulate a presidential speech</p>
+                            </div>
+                        </div>
                     </div>
-                    <div class="game-card">
-                        <div class="game-icon"><i class="fas fa-pencil-alt"></i></div>
-                        <h4>Write to Survive</h4>
-                        <p>One player comes up with a scenario, each player writes their way out of it.</p>
-                    </div>
-                    <div class="game-card">
-                        <div class="game-icon"><i class="fas fa-gavel"></i></div>
-                        <h4>Debate it</h4>
-                        <p>Argue for ridiculous topics and let the room vote on who won.</p>
-                    </div>
-                    <div class="game-card">
-                        <div class="game-icon"><i class="fas fa-chess"></i></div>
-                        <h4>Monkey's Dilemma</h4>
-                        <p>Outwit your opponents in banana-stealing showdowns and tactical challenges.</p>
-                    </div>
-                    <div class="game-card">
-                        <div class="game-icon"><i class="fas fa-person-falling-burst"></i></div>
-                        <h4>Don't Fall Off</h4>
-                        <p>Bump your opponents off the stage to claim victory in this chaotic free-for-all.</p>
-                    </div>
-                    <div class="game-card">
-                        <div class="game-icon"><i class="fas fa-paint-brush"></i></div>
-                        <h4>Swipe Sketch</h4>
-                        <p>Unleash your inner artist and create a dating profile that other players can swipe through.
-                        </p>
-                    </div>
-                    <div class="game-card">
-                        <div class="game-icon"><i class="fa-solid fa-kiwi-bird"></i></div>
-                        <h4>Duck Shake</h4>
-                        <p>Shake your device to get your duck closer to victory.</p>
-                    </div>
-                    <div class="game-card">
-                        <div class="game-icon"><i class="fa-solid fa-gamepad"></i></div>
-                        <h4>And Many More...</h4>
+
+                    <div class="carousel-indicators" id="carousel-indicators">
+                        <!-- Created dynamically by JS -->
                     </div>
                 </div>
             </div>
@@ -246,6 +369,128 @@
             </div>
         </div>
     </footer>
+
+    <!-- Carousel and Animation Scripts -->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const scroller = document.getElementById('carousel-scroller');
+            const items = scroller.querySelectorAll('.carousel-item');
+            const prevBtn = document.getElementById('prev-btn');
+            const nextBtn = document.getElementById('next-btn');
+            const indicatorsContainer = document.getElementById('carousel-indicators');
+
+            // 1. Generate indicators
+            items.forEach((item, index) => {
+                const indicator = document.createElement('button');
+                indicator.classList.add('indicator');
+                if (index === 0) indicator.classList.add('active');
+                indicator.setAttribute('aria-label', `Go to slide ${index + 1}`);
+                indicator.addEventListener('click', () => {
+                    const scrollAmount = item.offsetLeft - scroller.offsetLeft - (scroller.clientWidth / 2) + (item.clientWidth / 2);
+                    scroller.scrollTo({
+                        left: scrollAmount,
+                        behavior: 'smooth'
+                    });
+                });
+                indicatorsContainer.appendChild(indicator);
+            });
+
+            const indicators = indicatorsContainer.querySelectorAll('.indicator');
+
+            // 2. Active state synchronization on scroll
+            const updateActiveState = () => {
+                const scrollerCenter = scroller.scrollLeft + (scroller.clientWidth / 2);
+                let closestIndex = 0;
+                let closestDistance = Infinity;
+
+                items.forEach((item, index) => {
+                    const itemCenter = item.offsetLeft - scroller.offsetLeft + (item.clientWidth / 2);
+                    const distance = Math.abs(scrollerCenter - itemCenter);
+                    if (distance < closestDistance) {
+                        closestDistance = distance;
+                        closestIndex = index;
+                    }
+                });
+
+                indicators.forEach((indicator, index) => {
+                    if (index === closestIndex) {
+                        indicator.classList.add('active');
+                    } else {
+                        indicator.classList.remove('active');
+                    }
+                });
+            };
+
+            scroller.addEventListener('scroll', updateActiveState);
+
+            // 3. Arrow navigation
+            const getScrollAmount = (direction) => {
+                const scrollStep = 310; // card width (280) + margin (30)
+                return direction * scrollStep;
+            };
+
+            prevBtn.addEventListener('click', () => {
+                scroller.scrollBy({ left: getScrollAmount(-1), behavior: 'smooth' });
+            });
+
+            nextBtn.addEventListener('click', () => {
+                scroller.scrollBy({ left: getScrollAmount(1), behavior: 'smooth' });
+            });
+
+            // 4. JS Fallback for Scroll-driven Animations
+            if (!CSS.supports('(animation-timeline: view()) and (animation-range: entry)')) {
+                const animations = new Map();
+
+                // Set up initial paused scale/opacity animations for each card
+                items.forEach(item => {
+                    const animation = item.animate(
+                        [
+                            { scale: '0.85', opacity: '0.5', filter: 'brightness(0.6)' },
+                            { scale: '1.05', opacity: '1', filter: 'brightness(1)' },
+                            { scale: '0.85', opacity: '0.5', filter: 'brightness(0.6)' }
+                        ],
+                        {
+                            duration: 1000,
+                            fill: 'both'
+                        }
+                    );
+                    animation.pause();
+                    animations.set(item, animation);
+                });
+
+                const tick = () => {
+                    const scrollerRect = scroller.getBoundingClientRect();
+                    const scrollerCenter = scrollerRect.left + scrollerRect.width / 2;
+
+                    items.forEach(item => {
+                        const animation = animations.get(item);
+                        if (!animation) return;
+
+                        const itemRect = item.getBoundingClientRect();
+                        const itemCenter = itemRect.left + itemRect.width / 2;
+
+                        // Calculate distance from center normalized by scroller width
+                        const distance = (itemCenter - scrollerCenter) / (scrollerRect.width / 2);
+
+                        // Map progress: 0 when item is centered (50% through animation),
+                        // 1 or -1 when item is far left/right
+                        // We map progress in range [0, 1] where center is 0.5
+                        let progress = 0.5 - (distance * 0.4);
+                        progress = Math.max(0, Math.min(1, progress));
+
+                        // Set current time in ms (0 to 1000)
+                        animation.currentTime = progress * 1000;
+                    });
+                };
+
+                scroller.addEventListener('scroll', tick);
+                // Run initially and on resize
+                window.addEventListener('resize', tick);
+                // Small delay to ensure layout is computed
+                setTimeout(tick, 100);
+            }
+        });
+    </script>
 </body>
 
 </html>
