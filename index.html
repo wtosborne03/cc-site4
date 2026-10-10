@@ -56,20 +56,23 @@
 
                 <!-- Hero Pitch -->
                 <div class="bauhaus-card hero-card">
-                    <div style="display: flex; flex-direction: row; align-items: center; gap: 1rem;">
+                    <div class="hero-header-row">
                         <img src="logo.webp" alt="Couch Cup Trophy" class="brand-logo">
-                        <div style="display: flex; flex-direction: column;">
+                        <div class="hero-headline-wrap">
                             <h1 class="hero-headline">
-                                NO CONTROLLERS.<br>
-                                <span class="text-red">JUST YOUR PHONE.</span>
+                                <span class="text-red">USE YA PHONE :)</span>
                             </h1>
-                            <p class="hero-subtitle">
-                                Host on PC or TV. 3 to 12 friends play together from their phone browser. 24 original
-                                party
-                                games for instant game night fun.
-                            </p>
                         </div>
+                        <a href="https://play.couchcup.tv/" class="btn btn-mobile-quick-join" target="_blank"
+                            rel="noopener">
+                            <i class="fas fa-mobile-screen"></i> JOIN
+                        </a>
                     </div>
+                    <p class="hero-subtitle">
+                        Host on PC or TV. 3 to 12 friends play together from their phone browser. 24 original party
+                        games for instant game night fun. Drinking Mode, an engaging host, and way more original
+                        minigames.
+                    </p>
                 </div>
 
                 <!-- Video Trailer Frame (Widescreen) -->
@@ -273,151 +276,151 @@
     <!-- 24 Games Database & Gallery Row Controller -->
     <script>
         const GAMES = [
-          {
-                    "id": "charades",
-                    "title": "Act Attack",
-                    "desc": "Hope you can act like a pro!",
-                    "box": "boxArt/act.webp"
-          },
-          {
-                    "id": "soccer",
-                    "title": "Ball Blitz",
-                    "desc": "Ball your way to victory!",
-                    "box": "boxArt/ball.webp"
-          },
-          {
-                    "id": "blanks",
-                    "title": "Blanks",
-                    "desc": "Fill in the blanks",
-                    "box": "boxArt/blanks.webp"
-          },
-          {
-                    "id": "bomb",
-                    "title": "Bomb Squad",
-                    "desc": "Avoid the bombs",
-                    "box": "boxArt/bomb.webp"
-          },
-          {
-                    "id": "trump",
-                    "title": "Breaking News",
-                    "desc": "Formulate a presidential speech",
-                    "box": "boxArt/trump.webp"
-          },
-          {
-                    "id": "busRide",
-                    "title": "Bus Ride",
-                    "desc": "Ride the bus, get ya cards right",
-                    "box": "boxArt/bus.webp"
-          },
-          {
-                    "id": "caption",
-                    "title": "Caption This",
-                    "desc": "Figure out the perfect captions for other people's images.",
-                    "box": "boxArt/pc.webp"
-          },
-          {
-                    "id": "poker",
-                    "title": "Couch Blackjack",
-                    "desc": "Classic High-Stakes Blackjack 21 with Live Strategy Advice",
-                    "box": "boxArt/poker.webp"
-          },
-          {
-                    "id": "kalshi",
-                    "title": "Current Odds",
-                    "desc": "Guess the current public odds of Polymarket events",
-                    "box": "boxArt/odds.webp"
-          },
-          {
-                    "id": "debate",
-                    "title": "Debate It",
-                    "desc": "Debate with the other players",
-                    "box": "boxArt/debate.webp"
-          },
-          {
-                    "id": "fall",
-                    "title": "Don't Fall Off",
-                    "desc": "Don't fall off the platform",
-                    "box": "boxArt/fall.webp"
-          },
-          {
-                    "id": "shake",
-                    "title": "Duck Shake",
-                    "desc": "Shake your duck to win!",
-                    "box": "boxArt/shake.webp"
-          },
-          {
-                    "id": "impractical_jokers",
-                    "title": "Legally Distinct Jokers",
-                    "desc": "Live camera stream dare game! (100% unaffiliated with any TV show). Talk in the Joker's earpiece and vote on their performance.",
-                    "box": "boxArt/joker.webp"
-          },
-          {
-                    "id": "map",
-                    "title": "Nuclear Bunker",
-                    "desc": "One player nukes a location, others hide. Don't get blown up!",
-                    "box": "boxArt/nuke.webp"
-          },
-          {
-                    "id": "pic_remix",
-                    "title": "Pic Remix",
-                    "desc": "Remix other player's pictures, let the best edit win!",
-                    "box": "boxArt/remix.webp"
-          },
-          {
-                    "id": "picture_prompt",
-                    "title": "Picture Prompt",
-                    "desc": "Guess the picture",
-                    "box": "boxArt/picture_prompt.webp"
-          },
-          {
-                    "id": "roulette",
-                    "title": "Retribution Roulette",
-                    "desc": "Spin the wheel to win!",
-                    "box": "boxArt/roulette.webp"
-          },
-          {
-                    "id": "spy",
-                    "title": "Sneaky Suspects",
-                    "desc": "Whos the real spy?",
-                    "box": "boxArt/spy.webp"
-          },
-          {
-                    "id": "speedway",
-                    "title": "Speedway Grand Prix",
-                    "desc": "Race your ball across a high-speed arcade circuit! Collect coins, boost through turns, and race to victory!",
-                    "box": "boxArt/speedway.webp"
-          },
-          {
-                    "id": "sketchmatch",
-                    "title": "Swipe Sketch",
-                    "desc": "Create and swipe some dating profiles!",
-                    "box": "boxArt/sketch.webp"
-          },
-          {
-                    "id": "trivia_tap",
-                    "title": "Trivia Tap",
-                    "desc": "Dive-bar trivia where knowledge pours the drinks! Answer correctly, dish out pints, and beware the final overflow penalty!",
-                    "box": "boxArt/trivia_tap.webp"
-          },
-          {
-                    "id": "verseoff",
-                    "title": "Verse-Off",
-                    "desc": "Complete the lyrics when the music stops!",
-                    "box": "boxArt/beat.webp"
-          },
-          {
-                    "id": "would_you_rather",
-                    "title": "Would You Rather",
-                    "desc": "Write two divisive options and try to split the room 50/50!",
-                    "box": "boxArt/rather.webp"
-          },
-          {
-                    "id": "survive",
-                    "title": "Write To Survive",
-                    "desc": "Write to survive",
-                    "box": "boxArt/survive.webp"
-          }
-];
+            {
+                "id": "charades",
+                "title": "Act Attack",
+                "desc": "Hope you can act like a pro!",
+                "box": "boxArt/act.webp"
+            },
+            {
+                "id": "soccer",
+                "title": "Ball Blitz",
+                "desc": "Ball your way to victory!",
+                "box": "boxArt/ball.webp"
+            },
+            {
+                "id": "blanks",
+                "title": "Blanks",
+                "desc": "Fill in the blanks",
+                "box": "boxArt/blanks.webp"
+            },
+            {
+                "id": "bomb",
+                "title": "Bomb Squad",
+                "desc": "Avoid the bombs",
+                "box": "boxArt/bomb.webp"
+            },
+            {
+                "id": "trump",
+                "title": "Breaking News",
+                "desc": "Formulate a presidential speech",
+                "box": "boxArt/trump.webp"
+            },
+            {
+                "id": "busRide",
+                "title": "Bus Ride",
+                "desc": "Ride the bus, get ya cards right",
+                "box": "boxArt/bus.webp"
+            },
+            {
+                "id": "caption",
+                "title": "Caption This",
+                "desc": "Figure out the perfect captions for other people's images.",
+                "box": "boxArt/pc.webp"
+            },
+            {
+                "id": "poker",
+                "title": "Couch Blackjack",
+                "desc": "Classic High-Stakes Blackjack 21 with Live Strategy Advice",
+                "box": "boxArt/poker.webp"
+            },
+            {
+                "id": "kalshi",
+                "title": "Current Odds",
+                "desc": "Guess the current public odds of Polymarket events",
+                "box": "boxArt/odds.webp"
+            },
+            {
+                "id": "debate",
+                "title": "Debate It",
+                "desc": "Debate with the other players",
+                "box": "boxArt/debate.webp"
+            },
+            {
+                "id": "fall",
+                "title": "Don't Fall Off",
+                "desc": "Don't fall off the platform",
+                "box": "boxArt/fall.webp"
+            },
+            {
+                "id": "shake",
+                "title": "Duck Shake",
+                "desc": "Shake your duck to win!",
+                "box": "boxArt/shake.webp"
+            },
+            {
+                "id": "impractical_jokers",
+                "title": "Legally Distinct Jokers",
+                "desc": "Live camera stream dare game! (100% unaffiliated with any TV show). Talk in the Joker's earpiece and vote on their performance.",
+                "box": "boxArt/joker.webp"
+            },
+            {
+                "id": "map",
+                "title": "Nuclear Bunker",
+                "desc": "One player nukes a location, others hide. Don't get blown up!",
+                "box": "boxArt/nuke.webp"
+            },
+            {
+                "id": "pic_remix",
+                "title": "Pic Remix",
+                "desc": "Remix other player's pictures, let the best edit win!",
+                "box": "boxArt/remix.webp"
+            },
+            {
+                "id": "picture_prompt",
+                "title": "Picture Prompt",
+                "desc": "Guess the picture",
+                "box": "boxArt/picture_prompt.webp"
+            },
+            {
+                "id": "roulette",
+                "title": "Retribution Roulette",
+                "desc": "Spin the wheel to win!",
+                "box": "boxArt/roulette.webp"
+            },
+            {
+                "id": "spy",
+                "title": "Sneaky Suspects",
+                "desc": "Whos the real spy?",
+                "box": "boxArt/spy.webp"
+            },
+            {
+                "id": "speedway",
+                "title": "Speedway Grand Prix",
+                "desc": "Race your ball across a high-speed arcade circuit! Collect coins, boost through turns, and race to victory!",
+                "box": "boxArt/speedway.webp"
+            },
+            {
+                "id": "sketchmatch",
+                "title": "Swipe Sketch",
+                "desc": "Create and swipe some dating profiles!",
+                "box": "boxArt/sketch.webp"
+            },
+            {
+                "id": "trivia_tap",
+                "title": "Trivia Tap",
+                "desc": "Dive-bar trivia where knowledge pours the drinks! Answer correctly, dish out pints, and beware the final overflow penalty!",
+                "box": "boxArt/trivia_tap.webp"
+            },
+            {
+                "id": "verseoff",
+                "title": "Verse-Off",
+                "desc": "Complete the lyrics when the music stops!",
+                "box": "boxArt/beat.webp"
+            },
+            {
+                "id": "would_you_rather",
+                "title": "Would You Rather",
+                "desc": "Write two divisive options and try to split the room 50/50!",
+                "box": "boxArt/rather.webp"
+            },
+            {
+                "id": "survive",
+                "title": "Write To Survive",
+                "desc": "Write to survive",
+                "box": "boxArt/survive.webp"
+            }
+        ];
 
         document.addEventListener('DOMContentLoaded', () => {
             let activeIdx = 0;
