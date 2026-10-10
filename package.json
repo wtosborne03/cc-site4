@@ -1,0 +1,9 @@
+{
+  "name": "cc-site4",
+  "version": "1.0.0",
+  "description": "Couch Cup official landing page",
+  "scripts": {
+    "sync": "node sync-games.js",
+    "serve": "npx serve ."
+  }
+}
