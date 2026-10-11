@@ -165,9 +165,9 @@ body {
 
 /* Larger Logo Icon */
 .brand-logo {
-    width: 8rem;
-    height: 8rem;
-    object-fit: contain;
+    width: 10rem;
+    height: 6rem;
+    object-fit: cover;
     flex-shrink: 0;
 }
 
@@ -878,7 +878,9 @@ body {
    MOBILE OVERRIDES
    ========================================================================== */
 @media (max-width: 1023px) {
-    html, body {
+
+    html,
+    body {
         overflow-x: hidden;
         max-width: 100vw;
     }
@@ -902,8 +904,9 @@ body {
     }
 
     .brand-logo {
-        width: 4.2rem;
+        width: 7.2rem;
         height: 4.2rem;
+        object-fit: cover;
         flex-shrink: 0;
     }
 
