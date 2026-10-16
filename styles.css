@@ -1150,3 +1150,298 @@ body {
     margin-left: 24px;
     margin-bottom: 16px;
 }
+
+/* ==========================================================================
+   SUPPORT & CONTACT PAGE STYLES
+   ========================================================================== */
+@media (min-width: 1024px) {
+    html:has(.legal-page),
+    body.legal-page,
+    html:has(.support-page),
+    body.support-page {
+        height: auto !important;
+        max-height: none !important;
+        overflow-y: auto !important;
+        overflow-x: hidden !important;
+    }
+}
+
+.support-page {
+    background-color: var(--b-canvas);
+    color: var(--b-black);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.support-container {
+    max-width: 860px;
+    width: 100%;
+    margin: 36px auto;
+    padding: 0 16px;
+    flex: 1;
+}
+
+.support-card {
+    background-color: var(--b-white);
+    border: var(--border-heavy);
+    box-shadow: var(--shadow-lg);
+    padding: 36px;
+}
+
+@media (max-width: 640px) {
+    .support-card {
+        padding: 24px 18px;
+    }
+}
+
+.support-header-area {
+    margin-bottom: 24px;
+}
+
+.support-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    font-family: var(--font-headline);
+    font-size: 0.75rem;
+    letter-spacing: 0.05em;
+    background-color: var(--b-yellow);
+    color: var(--b-black);
+    border: var(--border-thick);
+    padding: 4px 10px;
+    text-transform: uppercase;
+    box-shadow: 2px 2px 0px var(--b-black);
+    margin-bottom: 12px;
+}
+
+.support-title {
+    font-family: var(--font-headline);
+    font-size: 2.2rem;
+    text-transform: uppercase;
+    line-height: 1.15;
+    margin-bottom: 12px;
+    border-bottom: var(--border-thick);
+    padding-bottom: 10px;
+}
+
+.support-desc {
+    font-size: 1rem;
+    line-height: 1.6;
+    color: #222222;
+}
+
+/* Quick Direct Contact Banner */
+.support-direct-banner {
+    background-color: var(--b-canvas-light);
+    border: var(--border-thick);
+    box-shadow: var(--shadow-sm);
+    padding: 16px 20px;
+    margin: 20px 0 28px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 14px;
+    flex-wrap: wrap;
+}
+
+.direct-banner-text {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-size: 0.95rem;
+}
+
+.direct-banner-text i {
+    font-size: 1.4rem;
+    color: var(--b-blue);
+}
+
+.direct-email-link {
+    font-family: var(--font-mono);
+    font-weight: 700;
+    color: var(--b-black);
+    text-decoration: underline;
+    text-decoration-thickness: 2px;
+}
+
+.direct-email-link:hover {
+    color: var(--b-red);
+}
+
+.btn-copy-email {
+    font-family: var(--font-headline);
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    padding: 7px 14px;
+    background-color: var(--b-white);
+    color: var(--b-black);
+    border: var(--border-thin);
+    box-shadow: 2px 2px 0px var(--b-black);
+    cursor: pointer;
+    transition: transform var(--speed), background-color var(--speed);
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.btn-copy-email:hover {
+    background-color: var(--b-yellow);
+    transform: translate(-1px, -1px);
+}
+
+.btn-copy-email:active {
+    transform: translate(1px, 1px);
+}
+
+/* Form Styles */
+.support-form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.form-grid-2 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+}
+
+@media (max-width: 600px) {
+    .form-grid-2 {
+        grid-template-columns: 1fr;
+    }
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.form-label {
+    font-family: var(--font-headline);
+    font-size: 0.85rem;
+    letter-spacing: 0.02em;
+    text-transform: uppercase;
+    color: var(--b-black);
+    display: flex;
+    align-items: center;
+    gap: 4px;
+}
+
+.form-label .req {
+    color: var(--b-red);
+}
+
+.form-input,
+.form-select,
+.form-textarea {
+    width: 100%;
+    font-family: var(--font-display);
+    font-size: 0.95rem;
+    font-weight: 500;
+    padding: 12px 14px;
+    border: var(--border-thick);
+    background-color: var(--b-white);
+    color: var(--b-black);
+    box-shadow: var(--shadow-sm);
+    border-radius: 0;
+    outline: none;
+    transition: transform var(--speed), box-shadow var(--speed), border-color var(--speed);
+    box-sizing: border-box;
+}
+
+.form-input:focus,
+.form-select:focus,
+.form-textarea:focus {
+    border-color: var(--b-black);
+    box-shadow: 5px 5px 0px var(--b-blue);
+    transform: translate(-2px, -2px);
+}
+
+.form-textarea {
+    resize: vertical;
+    min-height: 140px;
+    line-height: 1.5;
+}
+
+.btn-support-submit {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    width: 100%;
+    padding: 16px 24px;
+    background-color: var(--b-red);
+    color: var(--b-white);
+    font-family: var(--font-headline);
+    font-size: 1.05rem;
+    text-transform: uppercase;
+    letter-spacing: 0.03em;
+    border: var(--border-heavy);
+    box-shadow: var(--shadow-md);
+    cursor: pointer;
+    transition: transform var(--speed), box-shadow var(--speed), background-color var(--speed);
+}
+
+.btn-support-submit:hover {
+    background-color: #b31616;
+    transform: translate(-2px, -2px);
+    box-shadow: var(--shadow-lg);
+}
+
+.btn-support-submit:active {
+    transform: translate(2px, 2px);
+    box-shadow: 2px 2px 0px var(--b-black);
+}
+
+/* Success notification message */
+.form-success-banner {
+    display: none;
+    margin-top: 20px;
+    padding: 18px 20px;
+    background-color: #E6F4EA;
+    border: var(--border-thick);
+    box-shadow: var(--shadow-sm);
+    color: #137333;
+    font-family: var(--font-display);
+}
+
+.form-success-banner.active {
+    display: block;
+}
+
+.form-success-title {
+    font-family: var(--font-headline);
+    font-size: 1.1rem;
+    text-transform: uppercase;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 6px;
+    color: #0d5324;
+}
+
+.form-success-body {
+    font-size: 0.95rem;
+    line-height: 1.5;
+    color: #1a4224;
+}
+
+.form-success-body a {
+    color: #0d5324;
+    font-weight: 700;
+    text-decoration: underline;
+}
+
+.support-footer-note {
+    margin-top: 28px;
+    padding-top: 18px;
+    border-top: var(--border-thin);
+    font-size: 0.85rem;
+    color: #555555;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}

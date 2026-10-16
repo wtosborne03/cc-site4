@@ -14,6 +14,12 @@
     # Enable serving partial content
     RewriteCond %{HTTP:Range} !^$
     RewriteRule .* - [E=HTTP_RANGE:%{HTTP:Range}]
+
+    # Support extensionless URLs (e.g. /support -> support.html)
+    RewriteCond %{REQUEST_FILENAME} !-f
+    RewriteCond %{REQUEST_FILENAME} !-d
+    RewriteCond %{REQUEST_FILENAME}.html -f
+    RewriteRule ^(.*)$ $1.html [L]
 </IfModule>
 
 SetOutputFilter DEFLATE

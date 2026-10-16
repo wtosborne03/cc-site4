@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <title>Support & Contact | Couch Cup</title>
+
+    <!-- Favicon -->
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#D02020">
+    <meta name="msapplication-TileColor" content="#D02020">
+
+    <!-- Bauhaus Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Space+Grotesk:wght@500;700;800&family=Space+Mono:wght@700&display=swap"
+        rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <script src="https://kit.fontawesome.com/94fbbf70a6.js" crossorigin="anonymous"></script>
+
+    <!-- SEO Meta Tags -->
+    <meta name="description"
+        content="Need help with Couch Cup? Get in touch with our development team for support, bug reports, questions, or feedback.">
+    <meta property="og:title" content="Support & Contact | Couch Cup">
+    <meta property="og:description"
+        content="Contact the Couch Cup developer team at dev@couchcup.tv for help, bugs, or general feedback.">
+    <meta property="og:image" content="logo.webp">
+    <meta property="og:type" content="website">
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body class="support-page">
+    <header class="legal-header">
+        <div class="legal-nav">
+            <a href="/" aria-label="Couch Cup Home">
+                <img src="logo.webp" alt="Couch Cup Logo" class="legal-logo">
+            </a>
+            <a href="/" class="btn btn-faq" style="min-width: auto; padding: 10px 18px;">
+                <i class="fas fa-arrow-left"></i> BACK TO HOME
+            </a>
+        </div>
+    </header>
+
+    <main class="support-container">
+        <div class="support-card">
+            <div class="support-header-area">
+                <span class="support-badge"><i class="fas fa-headset"></i> Support & Contact</span>
+                <h1 class="support-title">GET IN TOUCH</h1>
+                <p class="support-desc">
+                    Have questions about Couch Cup, ran into a bug during a party, or have an idea for a minigame? Fill out the quick form below or reach out directly to our developers at <strong>dev@couchcup.tv</strong>.
+                </p>
+            </div>
+
+            <!-- Quick Direct Contact Banner -->
+            <div class="support-direct-banner">
+                <div class="direct-banner-text">
+                    <i class="fas fa-envelope-open-text"></i>
+                    <div>
+                        <span style="display: block; font-size: 0.78rem; text-transform: uppercase; font-family: var(--font-headline); color: #555;">Direct Developer Email</span>
+                        <a href="mailto:dev@couchcup.tv" class="direct-email-link">dev@couchcup.tv</a>
+                    </div>
+                </div>
+                <button type="button" class="btn-copy-email" id="copy-email-btn" aria-label="Copy dev@couchcup.tv email address">
+                    <i class="far fa-copy"></i> Copy Email
+                </button>
+            </div>
+
+            <!-- Support Email Form -->
+            <form id="support-form" class="support-form" action="mailto:dev@couchcup.tv" method="POST" enctype="text/plain">
+                <div class="form-grid-2">
+                    <div class="form-group">
+                        <label for="support-name" class="form-label">
+                            Your Name <span class="req">*</span>
+                        </label>
+                        <input type="text" id="support-name" name="name" class="form-input" placeholder="e.g. Sam" required autocomplete="name">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="support-email" class="form-label">
+                            Your Email <span class="req">*</span>
+                        </label>
+                        <input type="email" id="support-email" name="email" class="form-input" placeholder="e.g. sam@example.com" required autocomplete="email">
+                    </div>
+                </div>
+
+                <div class="form-grid-2">
+                    <div class="form-group">
+                        <label for="support-topic" class="form-label">
+                            Topic / Category <span class="req">*</span>
+                        </label>
+                        <select id="support-topic" name="topic" class="form-select" required>
+                            <option value="General Question">General Question</option>
+                            <option value="Bug Report">Bug Report</option>
+                            <option value="Phone Connection Issue">Phone Connection Issue</option>
+                            <option value="Steam / Game Key Support">Steam / Game Key Support</option>
+                            <option value="Feature / Game Suggestion">Feature / Game Suggestion</option>
+                            <option value="Business / Press">Business / Press</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="support-subject" class="form-label">
+                            Subject <span class="req">*</span>
+                        </label>
+                        <input type="text" id="support-subject" name="subject" class="form-input" placeholder="Brief summary of your question or issue" required>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="support-message" class="form-label">
+                        Message <span class="req">*</span>
+                    </label>
+                    <textarea id="support-message" name="message" class="form-textarea" rows="6" placeholder="Provide as much detail as possible (what device you were using, steps to reproduce, or your thoughts)..." required></textarea>
+                </div>
+
+                <button type="submit" class="btn-support-submit" id="submit-btn">
+                    <i class="fas fa-paper-plane"></i> Send to dev@couchcup.tv
+                </button>
+            </form>
+
+            <!-- Success / Fallback Message Banner -->
+            <div id="form-success-banner" class="form-success-banner" role="status" aria-live="polite">
+                <div class="form-success-title">
+                    <i class="fas fa-check-circle"></i> Opening Your Email Client
+                </div>
+                <div class="form-success-body">
+                    We've generated an email draft directed to <strong>dev@couchcup.tv</strong>. If your email application didn't open automatically, <a id="fallback-mail-link" href="mailto:dev@couchcup.tv">click here to launch it</a>, or write to us directly at <strong>dev@couchcup.tv</strong>.
+                </div>
+            </div>
+
+            <div class="support-footer-note">
+                <i class="fas fa-info-circle text-blue"></i>
+                <span>We typically respond to developer and player inquiries within 24–48 hours.</span>
+            </div>
+        </div>
+    </main>
+
+    <!-- Minimal Bauhaus Footer -->
+    <footer class="bauhaus-footer" id="site-footer">
+        <div class="footer-left">
+            <span>&copy; 2025 COUCH CUP</span>
+            <span class="sep">•</span>
+            <span>$5 ON STEAM &bull; FREE TO JOIN ON ANY PHONE</span>
+        </div>
+        <div class="footer-right">
+            <a href="/privacy.html">PRIVACY</a>
+            <span class="sep">/</span>
+            <a href="/termsofservice.html">TERMS</a>
+            <span class="sep">/</span>
+            <a href="/support.html">SUPPORT</a>
+            <span class="sep">/</span>
+            <a href="https://bsky.app/profile/couchcup.tv" aria-label="Bluesky" target="_blank" rel="noopener"><i
+                    class="fab fa-bluesky"></i></a>
+            <a href="https://www.youtube.com/@CouchCup" aria-label="YouTube" target="_blank" rel="noopener"><i
+                    class="fab fa-youtube"></i></a>
+            <a href="https://store.steampowered.com/app/3359160" aria-label="Steam" target="_blank"
+                rel="noopener"><i class="fab fa-steam"></i></a>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const form = document.getElementById('support-form');
+            const successBanner = document.getElementById('form-success-banner');
+            const fallbackLink = document.getElementById('fallback-mail-link');
+            const copyBtn = document.getElementById('copy-email-btn');
+
+            // Copy Email Handler
+            if (copyBtn) {
+                copyBtn.addEventListener('click', () => {
+                    navigator.clipboard.writeText('dev@couchcup.tv').then(() => {
+                        const originalHTML = copyBtn.innerHTML;
+                        copyBtn.innerHTML = '<i class="fas fa-check"></i> Copied!';
+                        setTimeout(() => {
+                            copyBtn.innerHTML = originalHTML;
+                        }, 2200);
+                    }).catch(() => {
+                        window.prompt('Copy email address:', 'dev@couchcup.tv');
+                    });
+                });
+            }
+
+            // Form Submit Handler
+            if (form) {
+                form.addEventListener('submit', (e) => {
+                    e.preventDefault();
+
+                    const name = document.getElementById('support-name').value.trim();
+                    const email = document.getElementById('support-email').value.trim();
+                    const topic = document.getElementById('support-topic').value;
+                    const subject = document.getElementById('support-subject').value.trim();
+                    const message = document.getElementById('support-message').value.trim();
+
+                    const fullSubject = `[Couch Cup Support] [${topic}] ${subject}`;
+                    const fullBody = `From: ${name} (${email})\nTopic: ${topic}\n\nMessage:\n${message}\n\n---\nSent from Couch Cup Support Form`;
+
+                    const mailtoUrl = `mailto:dev@couchcup.tv?subject=${encodeURIComponent(fullSubject)}&body=${encodeURIComponent(fullBody)}`;
+
+                    if (fallbackLink) {
+                        fallbackLink.href = mailtoUrl;
+                    }
+
+                    if (successBanner) {
+                        successBanner.classList.add('active');
+                        successBanner.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+                    }
+
+                    // Open user's email client
+                    window.location.href = mailtoUrl;
+                });
+            }
+        });
+    </script>
+</body>
+
+</html>
